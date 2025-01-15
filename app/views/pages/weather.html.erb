@@ -2,8 +2,7 @@
 <p>Welcome the weather forecast!</p>
 <p>Made by Ryan Liu</p>
 <p>PM Accelerator</p>
-<p>Description: The Product Manager Accelerator Program is designed to support PM professionals through every stage of their careers. From students looking for entry-level jobs to Directors looking to take on a leadership role, our program has helped over hundreds of students fulfill their career aspirations.
-</p>
+
 <% if @final_output.is_a?(Hash) && !@final_output.key?("error") %>
   <p>
     Location: <%= @final_output["location"]["name"] %> <%= @final_output["location"]["region"] %> <br />
