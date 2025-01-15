@@ -1,0 +1,26 @@
+<h1>Weatherapp</h1>
+<p>Welcome the weather forecast!</p>
+<p>Made by Ryan Liu</p>
+<p>PM Accelerator</p>
+<% if @final_output.is_a?(Hash) && !@final_output.key?("error") %>
+  <p>
+    Location: <%= @final_output["location"]["name"] %> <%= @final_output["location"]["region"] %> <br />
+    Current time: <%= @final_output["location"]["localtime"] %> <br />
+    Type: <%= @final_output["current"]["condition"]["text"] %> <br />
+    Temperature (°F): <%= @final_output["current"]["temp_f"] %> <br />
+    Wind (mph): <%= @final_output["current"]["wind_mph"] %> <br />
+    Precipitation (in): <%= @final_output["current"]["precip_in"] %> <br />
+    Cloud Cover: <%= @final_output["current"]["cloud"] %>% <br />
+    Feels Like Temp (°F): <%= @final_output["current"]["feelslike_f"] %> <br />
+  </p>
+<% else %>
+  <p><%= @final_output %></p>
+<% end %>
+
+
+
+<%= link_to "Back to First Page", pages_welcome_path, class: "btn btn-secondary" %>
+
+<%# <p>The ZIP code inputted is: <%= @zipcode %></p>
+<%# <p><%= "The ZIP code inputted is: #{h(@zipcode)}" %></p>
+<%# <p> Weather: <%= @final_output %></p>

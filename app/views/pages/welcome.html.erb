@@ -1,0 +1,11 @@
+<h1>Weatherapp</h1>
+<p>Fill in a zipcode and submit to retrieve a forecast.</p>
+<p>Made by Ryan Liu</p>
+<p>PM Accelerator</p>
+<%= form_with url: navigate_path, method: :post do %>
+  <div class="mb-3">
+    <%= label_tag :zipcode, "Enter A Zipcode:" %>
+    <%= text_field_tag :zipcode %>
+  </div>
+  <%= submit_tag "Submit ZIP", class: "btn btn-primary" %>
+<% end %>
