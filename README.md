@@ -15,7 +15,7 @@ This is a web application built with Ruby on Rails for seeing a weather forecast
 1. Clone the Repository:
 
 ```bash
-git clone git@github.com:CSE3901-AU24-11386/finalproject-team2.git
+git clone https://github.com/rbl24/weatherapp2.git
 ```
 
 2. Install Dependencies:
